@@ -31,16 +31,23 @@ public class DaycareClassrooms extends javax.swing.JPanel {
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable6 = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1100, 700));
         setPreferredSize(new java.awt.Dimension(1100, 700));
         setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.Y_AXIS));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        backButton.setBackground(new java.awt.Color(0, 102, 255));
+        backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("Back");
 
         jLabel1.setFont(new java.awt.Font("Krub", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("CLASSROOMS ");
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -53,7 +60,11 @@ public class DaycareClassrooms extends javax.swing.JPanel {
             .addGap(0, 28, Short.MAX_VALUE)
         );
 
+        jScrollPane1.setBackground(new java.awt.Color(0, 102, 255));
+
+        jTable1.setBackground(new java.awt.Color(0, 102, 255));
         jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -65,9 +76,15 @@ public class DaycareClassrooms extends javax.swing.JPanel {
                 "ID", "0"
             }
         ));
+        jTable1.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jTable1.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane1.setViewportView(jTable1);
 
+        jScrollPane2.setBackground(new java.awt.Color(0, 102, 255));
+
+        jTable2.setBackground(new java.awt.Color(0, 102, 255));
         jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
+        jTable2.setForeground(new java.awt.Color(255, 255, 255));
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -79,9 +96,13 @@ public class DaycareClassrooms extends javax.swing.JPanel {
                 "ID", "1"
             }
         ));
+        jTable2.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jTable2.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane2.setViewportView(jTable2);
 
+        jTable3.setBackground(new java.awt.Color(0, 102, 255));
         jTable3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255), 3));
+        jTable3.setForeground(new java.awt.Color(255, 255, 255));
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -93,8 +114,12 @@ public class DaycareClassrooms extends javax.swing.JPanel {
                 "ID", "2"
             }
         ));
+        jTable3.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jTable3.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane3.setViewportView(jTable3);
 
+        jTable4.setBackground(new java.awt.Color(0, 102, 255));
+        jTable4.setForeground(new java.awt.Color(255, 255, 255));
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -106,8 +131,12 @@ public class DaycareClassrooms extends javax.swing.JPanel {
                 "ID", "3"
             }
         ));
+        jTable4.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jTable4.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane4.setViewportView(jTable4);
 
+        jTable5.setBackground(new java.awt.Color(0, 102, 255));
+        jTable5.setForeground(new java.awt.Color(255, 255, 255));
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -119,8 +148,12 @@ public class DaycareClassrooms extends javax.swing.JPanel {
                 "ID", "4"
             }
         ));
+        jTable5.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jTable5.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane5.setViewportView(jTable5);
 
+        jTable6.setBackground(new java.awt.Color(0, 102, 255));
+        jTable6.setForeground(new java.awt.Color(255, 255, 255));
         jTable6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -132,6 +165,8 @@ public class DaycareClassrooms extends javax.swing.JPanel {
                 "ID", "5"
             }
         ));
+        jTable6.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        jTable6.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane6.setViewportView(jTable6);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -153,7 +188,7 @@ public class DaycareClassrooms extends javax.swing.JPanel {
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(392, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()

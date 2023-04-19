@@ -46,83 +46,102 @@ public class NewStudent extends javax.swing.JPanel {
         addStudentButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1100, 700));
         setPreferredSize(new java.awt.Dimension(1100, 700));
 
+        headerPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Krub", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Add a Student to DAYCARE");
+        jLabel1.setText("Admiting a NewStudent to DAYCARE");
         jLabel1.setToolTipText("");
 
-        contentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 255)));
+        contentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        contentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 255)));
         contentPanel.setToolTipText("");
         contentPanel.setName(""); // NOI18N
 
-        jLabel2.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("First Name");
 
-        jLabel6.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Age (months)");
 
         idValue.setEditable(false);
+        idValue.setBackground(new java.awt.Color(255, 255, 255));
+        idValue.setForeground(new java.awt.Color(0, 153, 255));
 
-        jLabel9.setForeground(new java.awt.Color(153, 255, 255));
+        ageValue.setForeground(new java.awt.Color(0, 153, 255));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Last Name");
 
+        studentLastNameValue.setForeground(new java.awt.Color(0, 153, 255));
         studentLastNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentLastNameValueActionPerformed(evt);
             }
         });
 
-        idLabel.setForeground(new java.awt.Color(153, 255, 255));
+        idLabel.setBackground(new java.awt.Color(255, 255, 255));
         idLabel.setText("ID");
 
+        studentFirstNameValue.setForeground(new java.awt.Color(0, 153, 255));
         studentFirstNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentFirstNameValueActionPerformed(evt);
             }
         });
 
-        jLabel11.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Registration Date");
 
         enrolledOn.setEditable(false);
+        enrolledOn.setBackground(new java.awt.Color(255, 255, 255));
+        enrolledOn.setForeground(new java.awt.Color(0, 153, 255));
 
-        jLabel3.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Father Name");
 
+        fatherNameValue.setForeground(new java.awt.Color(0, 153, 255));
         fatherNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fatherNameValueActionPerformed(evt);
             }
         });
 
-        jLabel5.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Mother Name");
 
-        jLabel7.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Address");
 
-        jLabel8.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Phone Number");
 
+        motherNameValue.setForeground(new java.awt.Color(0, 153, 255));
         motherNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 motherNameValueActionPerformed(evt);
             }
         });
 
+        addressValue.setForeground(new java.awt.Color(0, 153, 255));
+
+        phoneNumberValue.setForeground(new java.awt.Color(0, 153, 255));
         phoneNumberValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 phoneNumberValueActionPerformed(evt);
             }
         });
 
+        ageGroupAssignedValue.setForeground(new java.awt.Color(0, 153, 255));
         ageGroupAssignedValue.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6-12months", "13-24months", "25-35months", "36-47months", "48-59months", "60months and Above" }));
 
-        jLabel10.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Age Group Assigned");
 
         javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
@@ -206,7 +225,7 @@ public class NewStudent extends javax.swing.JPanel {
                 .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(phoneNumberValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
                     .addComponent(ageGroupAssignedValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -219,11 +238,11 @@ public class NewStudent extends javax.swing.JPanel {
             .addGroup(headerPanelLayout.createSequentialGroup()
                 .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(headerPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(headerPanelLayout.createSequentialGroup()
                         .addGap(97, 97, 97)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(headerPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
         headerPanelLayout.setVerticalGroup(
@@ -233,12 +252,14 @@ public class NewStudent extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(56, 56, 56)
                 .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addContainerGap())
         );
 
         contentPanel.getAccessibleContext().setAccessibleName("Please Add Student Details");
 
+        addStudentButton.setBackground(new java.awt.Color(0, 102, 255));
         addStudentButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        addStudentButton.setForeground(new java.awt.Color(255, 255, 255));
         addStudentButton.setText("Add");
         addStudentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,6 +267,8 @@ public class NewStudent extends javax.swing.JPanel {
             }
         });
 
+        backButton.setBackground(new java.awt.Color(0, 102, 255));
+        backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("Back");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -253,15 +276,15 @@ public class NewStudent extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(243, Short.MAX_VALUE)
+                .addContainerGap(251, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(196, 196, 196))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(addStudentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(91, 91, 91)
+                        .addComponent(addStudentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(313, 313, 313))))
         );
         layout.setVerticalGroup(
@@ -271,9 +294,9 @@ public class NewStudent extends javax.swing.JPanel {
                 .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addStudentButton)
-                    .addComponent(backButton))
-                .addContainerGap(94, Short.MAX_VALUE))
+                    .addComponent(addStudentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
