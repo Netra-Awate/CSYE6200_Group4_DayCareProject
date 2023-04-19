@@ -29,7 +29,7 @@ public class LoginController {
         daycare = DaycareStructure.captureData();
 
         login = new Login(daycare);
-        this.loginImageButton = login.loginImageButton;
+     //   this.loginImageButton = login.loginImageButton;
         setIcons();
         login.pack();
         login.setVisible(true);
@@ -41,7 +41,7 @@ public class LoginController {
     private void setIcons() {
         Icon imageHelper = new Icon();
 
-        buttonIconMap.put(loginImageButton, "/icons/login.png");
+      //  buttonIconMap.put(loginImageButton, "/icons/login.png");
 
         for (Map.Entry<JButton, String> button : buttonIconMap.entrySet()) {
             imageHelper.setIcon(button.getValue(), button.getKey());

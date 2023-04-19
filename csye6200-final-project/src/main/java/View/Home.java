@@ -63,6 +63,7 @@ public class Home extends javax.swing.JPanel {
 
         setMinimumSize(new java.awt.Dimension(1100, 800));
         setPreferredSize(new java.awt.Dimension(1100, 800));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
@@ -168,16 +169,7 @@ public class Home extends javax.swing.JPanel {
 
         jSplitPane1.setRightComponent(dashboardContainer);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
-        );
+        add(jSplitPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 800));
     }// </editor-fold>//GEN-END:initComponents
 
     private void classroomsButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_classroomsButton1ActionPerformed
