@@ -100,7 +100,7 @@ public class Login extends javax.swing.JFrame {
 
         banner.setIcon(new javax.swing.ImageIcon(getClass().getResource("/banner5.jpeg"))); // NOI18N
         loginPanel.add(banner, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 680, 330));
-        loginPanel.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 800));
+        loginPanel.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 1100, 800));
 
         jLayeredPane1.add(loginPanel);
 
@@ -134,6 +134,7 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
           }
+            
         });
 
     }
