@@ -19,7 +19,7 @@ public class VaccinationController {
     private VaccinationDetails panel;
 
     private javax.swing.JButton backButton;
-    public javax.swing.JTable vaxTable;
+    public javax.swing.JTable vaxDetailTable;
 
     public VaccinationController(JPanel container, Daycare daycare) {
         this.container = container;
@@ -28,7 +28,7 @@ public class VaccinationController {
         this.panel = new VaccinationDetails();
         this.backButton = panel.backButton;
 //        this.immuTable = panel.immuTable;
-        this.vaxTable = panel.StudentVaxTable;
+        this.vaxDetailTable = panel.StudentVaxTable;
 
         backButton.addActionListener(l -> {
             goBack();
@@ -44,15 +44,15 @@ public class VaccinationController {
     public void setTable() {
 
 
-        vaxTable.setAutoCreateRowSorter(true);
-        DefaultTableModel vaxTableModel = (DefaultTableModel) vaxTable.getModel();
+        vaxDetailTable.setAutoCreateRowSorter(true);
+        DefaultTableModel vaxTableModel = (DefaultTableModel) vaxDetailTable.getModel();
         vaxTableModel.setRowCount(0);
-        for (AbstractIndividual student : daycare.getStudentList()) {
+        for (AbstractIndividual student : daycare.getListStudent()) {
             Object[] row = new Object[9];
             Student s = (Student) student;
-            row[0] = s.getId();
-            row[1] = student.getFirstName() + " " + s.getLastName();
-            row[2] = student.getAge();
+            row[0] = s.getInstructorId();
+            row[1] = student.getInstructorFirstName() + " " + s.getInstructorLastName();
+            row[2] = student.getInstructorAge();
             List<String> VaxCount = ((Student) student).getVaxCount();
             // ["Hib", "DTaP", "Polio", "Hepatitis B", "MMR", "Varicella"]
             row[3] = VaxCount.get(0); // "Hib"

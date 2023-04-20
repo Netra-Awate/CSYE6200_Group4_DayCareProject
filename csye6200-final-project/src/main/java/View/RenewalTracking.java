@@ -43,13 +43,17 @@ public class RenewalTracking extends javax.swing.JPanel {
             }
         });
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1100, 700));
 
+        HEADING.setBackground(new java.awt.Color(255, 255, 255));
         HEADING.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
-        HEADING.setForeground(new java.awt.Color(153, 255, 255));
+        HEADING.setForeground(new java.awt.Color(0, 102, 255));
         HEADING.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        HEADING.setText("You can find List of Students who need renewal here");
+        HEADING.setText(" List of Students needing Renewal ");
 
+        backButton.setBackground(new java.awt.Color(0, 102, 255));
+        backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +61,9 @@ public class RenewalTracking extends javax.swing.JPanel {
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(0, 102, 255));
+
+        RenewalTable.setBackground(new java.awt.Color(0, 102, 255));
         RenewalTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -83,8 +90,13 @@ public class RenewalTracking extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        RenewalTable.setSelectionBackground(java.awt.Color.white);
+        RenewalTable.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane1.setViewportView(RenewalTable);
 
+        jScrollPane2.setBackground(new java.awt.Color(0, 102, 255));
+
+        NoRenewalTable.setBackground(new java.awt.Color(0, 102, 255));
         NoRenewalTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -111,16 +123,20 @@ public class RenewalTracking extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        NoRenewalTable.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        NoRenewalTable.setSelectionForeground(new java.awt.Color(0, 102, 255));
         jScrollPane2.setViewportView(NoRenewalTable);
 
         RenewalRequiredHeading.setBackground(new java.awt.Color(204, 255, 255));
         RenewalRequiredHeading.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
-        RenewalRequiredHeading.setText("RENEWAL REQUIRED");
+        RenewalRequiredHeading.setText("RENEWAL ");
 
-        NoRenewalRequiredHeading.setBackground(new java.awt.Color(204, 255, 255));
+        NoRenewalRequiredHeading.setBackground(new java.awt.Color(255, 255, 255));
         NoRenewalRequiredHeading.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
-        NoRenewalRequiredHeading.setText("NO RENEWAL REQUIRED");
+        NoRenewalRequiredHeading.setText("NON RENEWAL ");
 
+        RenewButton.setBackground(new java.awt.Color(0, 102, 255));
+        RenewButton.setForeground(new java.awt.Color(255, 255, 255));
         RenewButton.setText("Renew");
         RenewButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,20 +155,16 @@ public class RenewalTracking extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 971, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 968, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(409, 409, 409)
-                                .addComponent(RenewalRequiredHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(386, 386, 386)
-                                .addComponent(NoRenewalRequiredHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(RenewalRequiredHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NoRenewalRequiredHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(330, 330, 330)
                         .addComponent(HEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(280, 280, 280)
-                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(374, 374, 374)
+                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(RenewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(RenewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -160,19 +172,19 @@ public class RenewalTracking extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(HEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addComponent(NoRenewalRequiredHeading)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93)
+                .addGap(87, 87, 87)
                 .addComponent(RenewalRequiredHeading)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backButton)
-                    .addComponent(RenewButton))
-                .addGap(54, 54, 54))
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RenewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46))
         );
     }// </editor-fold>//GEN-END:initComponents
 

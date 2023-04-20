@@ -35,25 +35,25 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
     }
 
     private void populateStudentInfo() {
-        firstNameValue.setText(student.getFirstName());
-        lastNameValue.setText(student.getLastName());
-        ageValue.setText(String.valueOf(student.getAge()));
-        idValue.setText(String.valueOf(student.getId()));
+        firstNameValue.setText(student.getInstructorFirstName());
+        lastNameValue.setText(student.getInstructorLastName());
+        ageValue.setText(String.valueOf(student.getInstructorAge()));
+        idValue.setText(String.valueOf(student.getInstructorId()));
         Student s = (Student) student;
-        enrolledOnValue.setText(s.getLastRegDate().toString());
-        addressValue.setText(s.getAddress());
-        phoneNumberValue.setText(s.getParentPhoneNumber());
-        renewalDateValue.setText(s.getExpectReNewDate().toString());  
+        enrolledOnValue.setText(s.getLastRegisteredData().toString());
+        addressValue.setText(s.getStudentAddress());
+        phoneNumberValue.setText(s.getParentContactNumber());
+        renewalDateValue.setText(s.getExpectedRenewDate().toString());  
         //jComboBox2.setSelectedIndex(3);
-        if(student.getAge() <= 12){
+        if(student.getInstructorAge() <= 12){
             jComboBox2.setSelectedIndex(0);
-        }else if((student.getAge() >=13) && (student.getAge()<=24)){
+        }else if((student.getInstructorAge() >=13) && (student.getInstructorAge()<=24)){
             jComboBox2.setSelectedIndex(1);
-        }else if((student.getAge() >=25) && (student.getAge()<=35)){
+        }else if((student.getInstructorAge() >=25) && (student.getInstructorAge()<=35)){
             jComboBox2.setSelectedIndex(2);
-        }else if((student.getAge() >=36) && (student.getAge()<=47)){
+        }else if((student.getInstructorAge() >=36) && (student.getInstructorAge()<=47)){
             jComboBox2.setSelectedIndex(3);  
-        }else if((student.getAge() >=48 )&& (student.getAge()<=59)){
+        }else if((student.getInstructorAge() >=48 )&& (student.getInstructorAge()<=59)){
             jComboBox2.setSelectedIndex(4);
         }else{
             jComboBox2.setSelectedIndex(5);
@@ -98,11 +98,17 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
         backButton = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1100, 700));
         setPreferredSize(new java.awt.Dimension(1100, 700));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("STUDENT INFORMATION");
 
@@ -124,24 +130,26 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
 
         jLabel1.getAccessibleContext().setAccessibleName("Student Information Update");
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 255)));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(0, 102, 255));
         jLabel3.setText("Lastname");
 
         jLabel4.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 102, 255));
         jLabel4.setText("Age");
 
         jLabel5.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 102, 255));
         jLabel5.setText("ID");
 
         idValue.setEditable(false);
 
         jLabel6.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(0, 102, 255));
         jLabel6.setText("Enrolled On");
 
         enrolledOnValue.setEditable(false);
@@ -152,19 +160,23 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
         });
 
         jLabel9.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(0, 102, 255));
         jLabel9.setText("Address");
 
+        firstNameValue.setForeground(new java.awt.Color(255, 255, 255));
+        firstNameValue.setSelectedTextColor(new java.awt.Color(255, 153, 0));
+        firstNameValue.setSelectionColor(new java.awt.Color(255, 255, 255));
+
         jLabel2.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 102, 255));
         jLabel2.setText("Firstname");
 
         jLabel10.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel10.setForeground(new java.awt.Color(0, 102, 255));
         jLabel10.setText("Phone Number");
 
         jLabel11.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(0, 102, 255));
         jLabel11.setText("Age Group");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6-12months", "13-24months", "25-35months", "36-47months", "48-59months", "60months and Above" }));
@@ -176,14 +188,14 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
         });
 
         jLabel7.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(0, 102, 255));
         jLabel7.setText("Renewal Date");
 
         renewalDateValue.setEditable(false);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(153, 255, 255));
+        jTextArea1.setForeground(new java.awt.Color(0, 102, 255));
         jTextArea1.setRows(5);
         jTextArea1.setText("Please Note:\nNot all fields are editable. \n");
         jScrollPane1.setViewportView(jTextArea1);
@@ -237,7 +249,7 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
-                    .addComponent(photoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(photoButton, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -363,12 +375,12 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
             if (s != null) {
                 Student student = (Student) s;
                 //student.setId(studentId); ID cannot chnage in the new model
-                student.setFirstName(studentFirstName);
-                student.setLastName(studentLastName);
+                student.setStudentFirstName(studentFirstName);
+                student.setStudentLastName(studentLastName);
                 //student.setLastRegDate(LocalDate.parse(regDate));
-                student.setAge(Integer.parseInt(age));
-                student.setAddress(address);
-                student.setParentPhoneNumber(phoneNumber);
+                student.setInstructorAge(Integer.parseInt(age));
+                student.setStudentAddress(address);
+                student.setParentContactNumber(phoneNumber);
                 //student.setGPA(Double.parseDouble(gpa));
 
                 //tfList.forEach(tf -> setEditableValue(tf, false));
