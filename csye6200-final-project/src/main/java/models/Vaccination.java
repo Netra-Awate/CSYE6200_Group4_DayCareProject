@@ -6,12 +6,12 @@ import java.util.List;
 
 public class Vaccination {
 
-    private List<LocalDate> DoesDate = new ArrayList<>();
-    private String Name;
+    private List<LocalDate> doseDates = new ArrayList<>();
+    private String vaxName;
     private LocalDate nextDoseDate;
     private LocalDate lastDoseDate;
     private int studentId;
-    private int noOfDoses;
+    private int numberOfDoses;
 
     public Vaccination(String csv) {
 
@@ -19,8 +19,8 @@ public class Vaccination {
 
         try {
             this.studentId = Integer.parseInt(item[0]);
-            this.Name = item[1];
-            this.noOfDoses = Integer.parseInt(item[2]);
+            this.vaxName = item[1];
+            this.numberOfDoses = Integer.parseInt(item[2]);
             this.lastDoseDate = LocalDate.parse(item[3]);
             this.nextDoseDate = LocalDate.parse(item[4]);
         } catch (NumberFormatException e) {
@@ -29,25 +29,25 @@ public class Vaccination {
         }
 
         for (int i = 3; i < item.length; i++) {
-            DoesDate.add(LocalDate.parse(item[i]));
+            doseDates.add(LocalDate.parse(item[i]));
         }
 
     }
 
-    public String getName() {
-        return Name;
+    public String getVaxName() {
+        return vaxName;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setVaxName(String vaxName) {
+        this.vaxName = vaxName;
     }
 
-    public List<LocalDate> getDoesDate() {
-        return DoesDate;
+    public List<LocalDate> getDoseDates() {
+        return doseDates;
     }
 
-    public void setDoesDate(List<LocalDate> DoesDate) {
-        this.DoesDate = DoesDate;
+    public void setDoseDates(List<LocalDate> doseDates) {
+        this.doseDates = doseDates;
     }
 
     public LocalDate getLastDoseDate() {
@@ -74,20 +74,20 @@ public class Vaccination {
         this.studentId = studentId;
     }
 
-    public int getNoOfDoses() {
-        return noOfDoses;
+    public int getNumberOfDoses() {
+        return numberOfDoses;
     }
 
-    public void setNoOfDoses(int noOfDoses) {
-        this.noOfDoses = noOfDoses;
+    public void setNumberOfDoses(int numberOfDoses) {
+        this.numberOfDoses = numberOfDoses;
     }
     
     
 
     @Override
     public String toString() {
-        return "Vax{" + Name
-                + "DoesDate=" + DoesDate
+        return "Vax{" + vaxName
+                + "DoesDate=" + doseDates
                 + '}';
     }
 }

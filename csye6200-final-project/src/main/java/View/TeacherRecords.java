@@ -38,19 +38,19 @@ public class TeacherRecords extends javax.swing.JPanel {
         daycare.showAll();
         // TODO: Add wage column to the table
         for (Classroom classroom
-                : daycare.getClassroomList()) {
-            List<Instructor> teachers = classroom.getTeacherList();
+                : daycare.getListClassroom()) {
+            List<Instructor> teachers = classroom.getListTeacher();
 //            Table Fields
 //"ID", "Firstname", "Lastname", "Age", "ClassroomId", "Size", "Count", "Wage", "NextReviewIn", "NextReviewDate", "LastReviewDate"
    
             for (Instructor teacher : teachers) {
                 Object[] row = new Object[9];
-                row[0] = teacher.getId();
-                row[1] = teacher.getFirstName();
-                row[2] = teacher.getLastName();
-                row[3] = String.valueOf(teacher.getReviewInDays()) + " days";
+                row[0] = teacher.getInstructorId();
+                row[1] = teacher.getInstructorFirstName();
+                row[2] = teacher.getInstructorLastName();
+                row[3] = String.valueOf(teacher.getDaysForReview()) + " days";
                 row[4] = teacher.getNextReviewDate();
-                row[5] = teacher.getReviewDate();
+                row[5] = teacher.getDateOfReview();
                 
                 model.addRow(row);
             }
@@ -208,10 +208,10 @@ public class TeacherRecords extends javax.swing.JPanel {
 
         int teacherId = (int) teachersTable.getValueAt(selectedRow, 0);
 
-        for (Classroom classroom : daycare.getClassroomList()) {
-            List<Instructor> teachers = classroom.getTeacherList();
+        for (Classroom classroom : daycare.getListClassroom()) {
+            List<Instructor> teachers = classroom.getListTeacher();
             for (Instructor teacherObj : teachers) {
-                if (teacherObj.getId() == teacherId) {
+                if (teacherObj.getInstructorId() == teacherId) {
                     TeacherProfile teacherInfoPanel = new TeacherProfile(container, teacherObj);
                     container.add(teacherInfoPanel);
                     CardLayout layout = (CardLayout) container.getLayout();

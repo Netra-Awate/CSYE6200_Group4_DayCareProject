@@ -35,7 +35,7 @@ public class DaycareStructure {
         for (String studentString : StudentList) {
             Student studentObj = StudentLazySingletonFactory.getInstance().getObject(studentString);
             for (Vaccination vObj : vaccinationListForDaycare) {
-                if (vObj.getStudentId() == studentObj.getId()) {
+                if (vObj.getStudentId() == studentObj.getInstructorId()) {
                     studentObj.addVax(vObj);
                 }
             }

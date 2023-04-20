@@ -24,14 +24,14 @@ public class NewStudentController {
     public javax.swing.JTextField id;
     public javax.swing.JTextField lastName;
     public javax.swing.JTextField firstName;
-    public javax.swing.JButton addStudentButton;
+    public javax.swing.JButton addNewStudentButton;
     public javax.swing.JTextField age;
     public javax.swing.JButton backButton;
     public javax.swing.JTextField fatherName;
     public javax.swing.JTextField motherName;
-    public javax.swing.JTextField registrationDate;
-    public javax.swing.JTextField address;
-    public javax.swing.JTextField phoneNumber;
+    public javax.swing.JTextField enrollmentDate;
+    public javax.swing.JTextField residenceAddress;
+    public javax.swing.JTextField contactInfo;
     public javax.swing.JComboBox ageGroupAssigned;
     
 
@@ -43,18 +43,18 @@ public class NewStudentController {
 
         this.panel = new NewStudent(); //here the panel has access to all the text fields
 
-        this.addStudentButton = panel.addStudentButton;
-        this.phoneNumber = panel.phoneNumberValue;
+        this.addNewStudentButton = panel.addStudentButton;
+        this.contactInfo = panel.phoneNumberValue;
         this.age = panel.ageValue;
         this.backButton = panel.backButton;
-        this.address = panel.addressValue;
+        this.residenceAddress = panel.addressValue;
         this.firstName = panel.studentLastNameValue;
         this.lastName = panel.studentFirstNameValue;
         this.fatherName = panel.fatherNameValue;
         this.ageGroupAssigned = panel.ageGroupAssignedValue;
         this.motherName = panel.motherNameValue;
         this.id = panel.idValue;
-        this.registrationDate = panel.enrolledOn;
+        this.enrollmentDate = panel.enrolledOn;
         
         
 
@@ -62,7 +62,7 @@ public class NewStudentController {
             goBackHandler();
         });
 
-        addStudentButton.addActionListener(l -> {
+        addNewStudentButton.addActionListener(l -> {
             addStudentToSchool();
         });
 
@@ -80,7 +80,7 @@ public class NewStudentController {
     }
 
     public NewStudent fetchStudentPanel() {
-        panel.idValue.setText(String.valueOf(daycare.getStudentList().size()+1));
+        panel.idValue.setText(String.valueOf(daycare.getListStudent().size()+1));
         String pattern = "yyyy-MM-dd";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 
@@ -94,21 +94,21 @@ public class NewStudentController {
     private void addStudentToSchool() {
         String idField = id.getText();
         String lastNameField = lastName.getText();
-        String enrolledOnField = registrationDate.getText();
+        String enrolledOnField = enrollmentDate.getText();
         String ageField = age.getText();
         String firstNameField = firstName.getText();
         String fatherNameField = fatherName.getText();
         String motherNameField = motherName.getText();
         String ageGroupAssigedField =  ageGroupAssigned.getSelectedItem().toString();
-        String addressField = address.getText();
-        String phoneNumberField = phoneNumber.getText();
+        String addressField = residenceAddress.getText();
+        String phoneNumberField = contactInfo.getText();
         
 
 //1,6,Mike,John,2022-11-20,John Snow,Rihanna,90 Parker Street,1234567890,false,6-12months
         if (firstNameField.equals("") || lastNameField.equals("") || idField.equals("") || ageField.equals("") || enrolledOnField.equals("") 
                 || addressField.equals("")|| phoneNumberField.equals("") || fatherNameField.equals("")|| motherNameField.equals("")) {
             JOptionPane.showMessageDialog(panel,
-                    "Please fill all the required fields",
+                    "Complete all the Necessary fields",
                     "Error Message",
                     JOptionPane.ERROR_MESSAGE);
             return;
@@ -122,12 +122,12 @@ public class NewStudentController {
 
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(panel,
-                    "Error. Unable to create the student",
+                    "Error. Student can't be Created",
                     "Error Message",
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
-        JOptionPane.showMessageDialog(panel, "Student successfully added.");
+        JOptionPane.showMessageDialog(panel, "Student successfully created.");
     }
 
 }
