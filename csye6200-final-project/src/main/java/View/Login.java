@@ -38,6 +38,7 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
 
         mainContainer.setBackground(new java.awt.Color(255, 255, 255));
+        mainContainer.setForeground(new java.awt.Color(255, 255, 255));
         mainContainer.setMinimumSize(new java.awt.Dimension(1100, 800));
         mainContainer.setLayout(new java.awt.CardLayout());
 

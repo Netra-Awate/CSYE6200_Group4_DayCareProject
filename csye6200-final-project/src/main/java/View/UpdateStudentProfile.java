@@ -98,11 +98,17 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
         backButton = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1100, 700));
         setPreferredSize(new java.awt.Dimension(1100, 700));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("STUDENT INFORMATION");
 
@@ -124,24 +130,26 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
 
         jLabel1.getAccessibleContext().setAccessibleName("Student Information Update");
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 255)));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(0, 102, 255));
         jLabel3.setText("Lastname");
 
         jLabel4.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 102, 255));
         jLabel4.setText("Age");
 
         jLabel5.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 102, 255));
         jLabel5.setText("ID");
 
         idValue.setEditable(false);
 
         jLabel6.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(0, 102, 255));
         jLabel6.setText("Enrolled On");
 
         enrolledOnValue.setEditable(false);
@@ -152,19 +160,23 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
         });
 
         jLabel9.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(0, 102, 255));
         jLabel9.setText("Address");
 
+        firstNameValue.setForeground(new java.awt.Color(255, 255, 255));
+        firstNameValue.setSelectedTextColor(new java.awt.Color(255, 153, 0));
+        firstNameValue.setSelectionColor(new java.awt.Color(255, 255, 255));
+
         jLabel2.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 102, 255));
         jLabel2.setText("Firstname");
 
         jLabel10.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel10.setForeground(new java.awt.Color(0, 102, 255));
         jLabel10.setText("Phone Number");
 
         jLabel11.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(0, 102, 255));
         jLabel11.setText("Age Group");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6-12months", "13-24months", "25-35months", "36-47months", "48-59months", "60months and Above" }));
@@ -176,14 +188,14 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
         });
 
         jLabel7.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(0, 102, 255));
         jLabel7.setText("Renewal Date");
 
         renewalDateValue.setEditable(false);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Krub", 1, 13)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(153, 255, 255));
+        jTextArea1.setForeground(new java.awt.Color(0, 102, 255));
         jTextArea1.setRows(5);
         jTextArea1.setText("Please Note:\nNot all fields are editable. \n");
         jScrollPane1.setViewportView(jTextArea1);
