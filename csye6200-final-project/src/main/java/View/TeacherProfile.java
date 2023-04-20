@@ -23,16 +23,16 @@ public class TeacherProfile extends javax.swing.JPanel {
         initComponents();
         this.container = container;
         this.teacher = teacher;
-        firstNameTf.setText(teacher.getFirstName());
-        lastNameTf.setText(teacher.getLastName());
-        ageTf.setText(String.valueOf(teacher.getAge()));
-        idTf.setText(String.valueOf(teacher.getId()));
+        firstNameTf.setText(teacher.getInstructorFirstName());
+        lastNameTf.setText(teacher.getInstructorLastName());
+        ageTf.setText(String.valueOf(teacher.getInstructorAge()));
+        idTf.setText(String.valueOf(teacher.getInstructorId()));
 
         Instructor t = (Instructor) teacher;
         classroomTf.setText(String.valueOf(t.getClassroomId()));
 //        wageTf.setText(String.valueOf(t.getWage()));
-        reviewDateTf.setText(t.getReviewDate().toString());
-        NextReviewDateTf.setText(String.valueOf(t.getReviewInDays()) + " days");
+        reviewDateTf.setText(t.getDateOfReview().toString());
+        NextReviewDateTf.setText(String.valueOf(t.getDaysForReview()) + " days");
         classRoomSizeTf.setText(String.valueOf(t.getSize()));
         StudentCountTf.setText(String.valueOf(t.getCount()));
         LastReviewScoreTf.setText(String.valueOf(t.getLastReviewScore()));
@@ -44,10 +44,10 @@ public class TeacherProfile extends javax.swing.JPanel {
         studentsOfTeacherTable.setAutoCreateRowSorter(true);
         DefaultTableModel model = (DefaultTableModel) studentsOfTeacherTable.getModel();
         model.setRowCount(0);
-        for (Student s : t.getStudentList()) {
+        for (Student s : t.getListStudent()) {
                 Object[] row = new Object[2];
-                row[0] = s.getId();
-                row[1] = s.getFirstName() + "  " + s.getLastName();                
+                row[0] = s.getInstructorId();
+                row[1] = s.getInstructorFirstName() + "  " + s.getInstructorLastName();                
                 model.addRow(row);}
     }
 

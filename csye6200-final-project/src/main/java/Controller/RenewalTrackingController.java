@@ -73,12 +73,12 @@ public class RenewalTrackingController {
         
         if (selectedStudent != null) {
             Student s = (Student) selectedStudent;
-            s.setLastRegDate(LocalDate.now());
-            s.setNeedRenew(false);
-            s.setExpectReNewDate(s.getLastRegDate().plusYears(1L));
+            s.setLastRegisteredData(LocalDate.now());
+            s.setIsRenewRequired(false);
+            s.setExpectedRenewDate(s.getLastRegisteredData().plusYears(1L));
       
             JOptionPane.showMessageDialog(panel,
-                    "The Student has successfully renewed his enrollment",
+                    "Student enrollment renewed successfully ",
                     "Success",
                     JOptionPane.OK_OPTION);
             
@@ -98,13 +98,13 @@ public class RenewalTrackingController {
         
         
         for (Student student : daycare.getStudentListwithIsNeedRenewTrue()) {
-            System.out.println(student.getId());
+            System.out.println(student.getInstructorId());
             Object[] row = new Object[5];
-            row[0] = student.getId();
-            row[1] = student.getFirstName()+ " " + student.getLastName();
-            row[2] = student.getAge();
-            row[3] = student.getLastRegDate().toString();
-            row[4] = student.getExpectReNewDate().toString();
+            row[0] = student.getInstructorId();
+            row[1] = student.getInstructorFirstName()+ " " + student.getInstructorLastName();
+            row[2] = student.getInstructorAge();
+            row[3] = student.getLastRegisteredData().toString();
+            row[4] = student.getExpectedRenewDate().toString();
             model.addRow(row);
         }
         
@@ -115,11 +115,11 @@ public class RenewalTrackingController {
 
        for (Student student : daycare.getStudentListwithIsNeedRenewFalse()) {
             Object[] row = new Object[5];
-            row[0] = student.getId();
-            row[1] = student.getFirstName()+ " " + student.getLastName();
-            row[2] = student.getAge();
-            row[3] = student.getLastRegDate().toString();
-            row[4] = student.getExpectReNewDate().toString();
+            row[0] = student.getInstructorId();
+            row[1] = student.getInstructorFirstName()+ " " + student.getInstructorLastName();
+            row[2] = student.getInstructorAge();
+            row[3] = student.getLastRegisteredData().toString();
+            row[4] = student.getExpectedRenewDate().toString();
             m.addRow(row);
         }
     }

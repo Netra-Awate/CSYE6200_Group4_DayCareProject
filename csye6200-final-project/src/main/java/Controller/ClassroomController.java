@@ -21,42 +21,42 @@ public class ClassroomController {
     private DaycareClassrooms panel;
 
     private JButton backButton;
-    private JTable classroomsTable;
+    private JTable classTable;
 
     
-    private PanelInfo p1;
-    private PanelInfo p2;
-    private PanelInfo p3;
-    private PanelInfo p4;
-    private PanelInfo p5;
-    private PanelInfo p6;
+    private PanelInfo panel1;
+    private PanelInfo panel2;
+    private PanelInfo panel3;
+    private PanelInfo panel4;
+    private PanelInfo panel5;
+    private PanelInfo panel6;
     
     public static class PanelInfo{
-        private JTable table;
+        private JTable infoTable;
         
         
         public PanelInfo(JTable t){
-            table = t;
+            infoTable = t;
         }
         
         public void fillClassroomIntoPanel(Classroom classRoomObj){
-            DefaultTableModel model = (DefaultTableModel) table.getModel();
+            DefaultTableModel model = (DefaultTableModel) infoTable.getModel();
             model.setRowCount(0);
             Object[] row1 = new Object[2];
             Object[] row2 = new Object[2];
             Object[] row3 = new Object[2];
             Object[] row4 = new Object[2];
-            row1[0] = "Max No. of Groups";
-            row1[1] = classRoomObj.getNumber();
-            int[] rangeArr = classRoomObj.getAgeRange();
+            row1[0] = "Max Possible Groups";
+            row1[1] = classRoomObj.getClassroomNumber();
+            int[] rangeArr = classRoomObj.getRangeOfAge();
             row2[0] = "Range";
             row2[1] = rangeArr[0] + " - " + rangeArr[1];
-            row3[0] = "Size of Group";
-            row3[1] = classRoomObj.getNumber();
-            row4[0] = "Number of Students";
+            row3[0] = "Group Size";
+            row3[1] = classRoomObj.getClassroomNumber();
+            row4[0] = "Total Students";
             int count = 0;
             for(Instructor teacher
-                    : classRoomObj.getTeacherList()){
+                    : classRoomObj.getListTeacher()){
                 count += teacher.getCount();
             }
             row4[1] = count;
@@ -95,24 +95,24 @@ public class ClassroomController {
     
     
     public void displayClassrooms(){
-        List<Classroom> classRoomList = daycare.getClassroomList();
-        p1 = new PanelInfo(panel.jTable1);
-        p1.fillClassroomIntoPanel(classRoomList.get(0));
+        List<Classroom> classRoomList = daycare.getListClassroom();
+        panel1 = new PanelInfo(panel.jTable1);
+        panel1.fillClassroomIntoPanel(classRoomList.get(0));
         
-        p2 = new PanelInfo(panel.jTable2);
-        p2.fillClassroomIntoPanel(classRoomList.get(1));
+        panel2 = new PanelInfo(panel.jTable2);
+        panel2.fillClassroomIntoPanel(classRoomList.get(1));
         
-        p3 = new PanelInfo(panel.jTable3);
-        p3.fillClassroomIntoPanel(classRoomList.get(2));
+        panel3 = new PanelInfo(panel.jTable3);
+        panel3.fillClassroomIntoPanel(classRoomList.get(2));
         
-        p4 = new PanelInfo(panel.jTable4);
-        p4.fillClassroomIntoPanel(classRoomList.get(3));
+        panel4 = new PanelInfo(panel.jTable4);
+        panel4.fillClassroomIntoPanel(classRoomList.get(3));
         
-        p5 = new PanelInfo(panel.jTable5);
-        p5.fillClassroomIntoPanel(classRoomList.get(4));
+        panel5 = new PanelInfo(panel.jTable5);
+        panel5.fillClassroomIntoPanel(classRoomList.get(4));
 //        
-        p6 = new PanelInfo(panel.jTable6);
-        p6.fillClassroomIntoPanel(classRoomList.get(5));
+        panel6 = new PanelInfo(panel.jTable6);
+        panel6.fillClassroomIntoPanel(classRoomList.get(5));
 
     }
 

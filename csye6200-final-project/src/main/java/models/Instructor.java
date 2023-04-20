@@ -9,146 +9,146 @@ import static java.util.stream.Collectors.toList;
 
 public class Instructor extends AbstractIndividual {
 
-    private int id;
-    private int age;
+    private int instructorId;
+    private int instructorAge;
     //private String Name;
-    private String LastName;
-    private String FirstName;
-    private int Wage;
-    private int ClassroomId;
-    private LocalDate ReviewDate;
-    private long ReviewInDays;
-    private LocalDate NextReviewDate;
-    private int LastReviewScore = 0;
-    private List<Student> StudentList = new ArrayList<>();
+    private String instructorLastName;
+    private String instructorFirstName;
+    private int salary;
+    private int classroomId;
+    private LocalDate dateOfReview;
+    private long daysForReview;
+    private LocalDate nextReviewDate;
+    private int lastReviewScore = 0;
+    private List<Student> listStudent = new ArrayList<>();
     private int count = 0;
     private int size;
 
     public Instructor(String TeacherCSVString, int tId, int size, int cId){
-        this.id = tId;
+        this.instructorId = tId;
         this.size = size;
-        this.ClassroomId = cId;
+        this.classroomId = cId;
 
         String[] item = TeacherCSVString.split(",");
-        this.FirstName = item[0];
-        this.LastName = item[1];
-        this.age = Integer.parseInt(item[2]);
-        this.ReviewDate = LocalDate.parse(item[3]);
+        this.instructorFirstName = item[0];
+        this.instructorLastName = item[1];
+        this.instructorAge = Integer.parseInt(item[2]);
+        this.dateOfReview = LocalDate.parse(item[3]);
         // Calculate Review in days based on current date
-        this.Wage = Integer.parseInt(item[4]);
-        this.LastReviewScore = Integer.parseInt(item[5]);
-        this.NextReviewDate = ReviewDate.plusDays(365);
-        this.ReviewInDays = Duration.between(LocalDate.now().atStartOfDay(), NextReviewDate.atStartOfDay()).toDays(); // another option
+        this.salary = Integer.parseInt(item[4]);
+        this.lastReviewScore = Integer.parseInt(item[5]);
+        this.nextReviewDate = dateOfReview.plusDays(365);
+        this.daysForReview = Duration.between(LocalDate.now().atStartOfDay(), nextReviewDate.atStartOfDay()).toDays(); // another option
         
     }
 
 
     public Instructor(int id, int size, String firstName, String lastName, int age, int wage, int cid, String reviewDate ){
-        this.FirstName = firstName;
-        this.LastName = lastName;
-        this.NextReviewDate = ReviewDate.plusDays(365);
-        this.id = id;
+        this.instructorFirstName = firstName;
+        this.instructorLastName = lastName;
+        this.nextReviewDate = dateOfReview.plusDays(365);
+        this.instructorId = id;
         this.size = size;
-        this.age = age;
+        this.instructorAge = age;
         //Random r = new Random();
-        this.Wage = wage;
-        this.ClassroomId = cid;
-        this.ReviewInDays = Duration.between(LocalDate.now().atStartOfDay(), ReviewDate.atStartOfDay()).toDays();
+        this.salary = wage;
+        this.classroomId = cid;
+        this.daysForReview = Duration.between(LocalDate.now().atStartOfDay(), dateOfReview.atStartOfDay()).toDays();
 
-        this.ReviewDate = LocalDate.parse(reviewDate);
+        this.dateOfReview = LocalDate.parse(reviewDate);
         // Calculate Review in days based on current date
         
         // Duration.
 //        long diffInMillies = Math.abs(secondDate.getTime() - firstDate.getTime());
 
         // Print Review Date
-        System.out.println(this.ReviewDate + " " + this.FirstName + " " + this.LastName + " " + reviewDate);
+        System.out.println(this.dateOfReview + " " + this.instructorFirstName + " " + this.instructorLastName + " " + reviewDate);
 
     }
 
-    public long getReviewInDays() {
-        return ReviewInDays;
+    public long getDaysForReview() {
+        return daysForReview;
     }
     
     public void setNextReviewDate(LocalDate nextReviewDate) {
-        NextReviewDate = nextReviewDate;
+        this.nextReviewDate = nextReviewDate;
     }
     
-    public void setReviewInDays(long reviewInDays) {
-        ReviewInDays = reviewInDays;
+    public void setDaysForReview(long reviewInDays) {
+        daysForReview = reviewInDays;
     }
 
     public LocalDate getNextReviewDate() {
-        System.out.println(NextReviewDate);
-        System.out.println(ReviewDate.plusDays(365));
-        return NextReviewDate;
+        System.out.println(nextReviewDate);
+        System.out.println(dateOfReview.plusDays(365));
+        return nextReviewDate;
     }
 
 
     public void setLastReviewScore(int lastReviewScore) {
-        LastReviewScore = lastReviewScore;
+        this.lastReviewScore = lastReviewScore;
     }
     
     public int getLastReviewScore() {
-        return LastReviewScore;
+        return lastReviewScore;
     }
 
     @Override
-    public void setId(int id) {
+    public void setInstructorId(int instructorId) {
         // TODO Auto-generated method stub
-        this.id = id;
+        this.instructorId = instructorId;
     }
 
     @Override
-    public int getId() {
+    public int getInstructorId() {
         // TODO Auto-generated method stub
-        return id;
+        return instructorId;
     }
 
     public void setClassroomId(int id){
-        this.ClassroomId = id;
+        this.classroomId = id;
     }
     
     @Override
-    public int getAge() {
+    public int getInstructorAge() {
         // TODO Auto-generated method stub
-        return this.age;
+        return this.instructorAge;
     }
     
     @Override
-    public void setAge(int age) {
+    public void setInstructorAge(int instructorAge) {
         // TODO Auto-generated method stub
 
     }
 
-    public LocalDate getReviewDate(){
-        return this.ReviewDate;
+    public LocalDate getDateOfReview(){
+        return this.dateOfReview;
     }
 
     @Override
-    public String getFirstName() {
-        return this.FirstName;
+    public String getInstructorFirstName() {
+        return this.instructorFirstName;
     }
 
     @Override
-    public String getLastName() {
-        return this.LastName;
+    public String getInstructorLastName() {
+        return this.instructorLastName;
     }
 
     public void deleteStudentById(int id){                
-        List<Student> students = StudentList
+        List<Student> students = listStudent
             .stream()
-            .filter(i -> i.getId()!=id)            
+            .filter(i -> i.getInstructorId()!=id)            
             .collect(toList());
         
-        this.StudentList = students;        
+        this.listStudent = students;        
     }
 
-    public int getWage(){return this.Wage;}
+    public int getSalary(){return this.salary;}
 
     public void addStudent(Student s){
-        StudentList.add(s);
-        s.setTid(this.id);
+        listStudent.add(s);
+        s.setTid(this.instructorId);
         count++;
     }
 
@@ -156,22 +156,22 @@ public class Instructor extends AbstractIndividual {
         return count < size;
     }
 
-    public List<Student> getStudentList() {
-        return StudentList;
+    public List<Student> getListStudent() {
+        return listStudent;
     }
     
     public void showStudents(){
-        if(!StudentList.isEmpty()){
-            for (Student s: StudentList){
-                System.out.println(s.getFirstName());
+        if(!listStudent.isEmpty()){
+            for (Student s: listStudent){
+                System.out.println(s.getInstructorFirstName());
             }
 
         }
 
     }
 
-    public void setStudentList(List<Student> StudentList) {
-        this.StudentList = StudentList;
+    public void setListStudent(List<Student> listStudent) {
+        this.listStudent = listStudent;
     }
 
     public void setCount(int count) {
@@ -191,29 +191,29 @@ public class Instructor extends AbstractIndividual {
         return size;
     }
 
-    public void setFirstName(String FirstName) {
-        this.FirstName = FirstName;
+    public void setInstructorFirstName(String instructorFirstName) {
+        this.instructorFirstName = instructorFirstName;
     }
     
     public int getClassroomId() {
-        return ClassroomId;
+        return classroomId;
     }
 
-    public void setLastName(String LastName) {
-        this.LastName = LastName;
+    public void setInstructorLastName(String instructorLastName) {
+        this.instructorLastName = instructorLastName;
     }
     
-    public void setWage(int Wage) {
-        this.Wage = Wage;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
-    public void setReviewDate(LocalDate ReviewDate) {
-        this.ReviewDate = ReviewDate;
+    public void setDateOfReview(LocalDate dateOfReview) {
+        this.dateOfReview = dateOfReview;
     }
 
     @Override
     public String toString() {
-        return "Teacher{" + "Id=" + id + ", Age=" + age + ", LastName=" + LastName + ", FirstName=" + FirstName + ", Wage=" + Wage + ", count=" + count + ", size=" + size + '}';
+        return "Teacher{" + "Id=" + instructorId + ", Age=" + instructorAge + ", LastName=" + instructorLastName + ", FirstName=" + instructorFirstName + ", Wage=" + salary + ", count=" + count + ", size=" + size + '}';
     }
     
     

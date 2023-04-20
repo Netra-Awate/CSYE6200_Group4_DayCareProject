@@ -8,65 +8,65 @@ import static java.util.stream.Collectors.toList;
 public class Daycare {
     
     
-    private int cid;
-    private int tid;
+    private int classId;
+    private int teacherId;
     
-    private List<Classroom> ClassroomList = new ArrayList<>();
+    private List<Classroom> listClassroom = new ArrayList<>();
     
-    private List<RatioRule> ratioRules = new ArrayList<>();
-    private List<Student> StudentList = new ArrayList<>();
+    private List<RatioRule> rulesRatio = new ArrayList<>();
+    private List<Student> listStudent = new ArrayList<>();
     
-    private List<Student> StudentListIsRenewFalse = new ArrayList<>();
-    private List<AbstractIndividual> TeacherList = new ArrayList<>();
-    private List<String> TeacherCSVList = new ArrayList<>();
-    private List<Student> StudentListIsRenewTrue = new ArrayList<>();
+    private List<Student> IsRenewFalseStudentList = new ArrayList<>();
+    private List<AbstractIndividual> listTeacher = new ArrayList<>();
+    private List<String> CSVListTeacher = new ArrayList<>();
+    private List<Student> IsRenewTrueStudentList = new ArrayList<>();
 
 
     public Daycare() {
 
-        tid = 0;
-        cid = 0;
+        teacherId = 0;
+        classId = 0;
 
     }
     
     public void addRatioRule(RatioRule r){
-        ratioRules.add(r);
+        rulesRatio.add(r);
     }
 
     public void addToDaycare(Student s){
-        StudentList.add(s);
+        listStudent.add(s);
 
         addNewStudentToClass(s);
 
     }
     
     private void addNewStudentToClass(Student studentObj){
-        if (ClassroomList.isEmpty()){
-            for (RatioRule ratioObj:ratioRules){
-                if (ratioObj.inRange(studentObj.getAge())){
-                    Classroom classRoomObj = ClassroomLazySingletonFactory.getInstance().getObject(cid++,ratioObj.getLow(),ratioObj.getHigh(), ratioObj.getClassroomSize(), ratioObj.getNumber());
-                    Instructor teacherObj = getNextTeacherObj(ratioObj.getGroupSize(),classRoomObj.getId());
-                    studentObj.setClassId(classRoomObj.getId());
+        if (listClassroom.isEmpty()){
+            for (RatioRule ratioObj:rulesRatio){
+                if (ratioObj.inRange(studentObj.getInstructorAge())){
+                    Classroom classRoomObj = ClassroomLazySingletonFactory.getInstance().getObject(classId++,ratioObj.getLow(),ratioObj.getHigh(), ratioObj.getSizeOfClassroom(), ratioObj.getNumber());
+                    Instructor teacherObj = getNextTeacherObj(ratioObj.getSizeOfGroup(),classRoomObj.getClassId());
+                    studentObj.setClassroomId(classRoomObj.getClassId());
                     teacherObj.addStudent(studentObj);
                     classRoomObj.addTeacher(teacherObj);
-                    for(int i = 0; i < ratioObj.getClassroomSize()-1; i++){
-                        classRoomObj.addTeacher(getNextTeacherObj(ratioObj.getGroupSize(),classRoomObj.getId()));
+                    for(int i = 0; i < ratioObj.getSizeOfClassroom()-1; i++){
+                        classRoomObj.addTeacher(getNextTeacherObj(ratioObj.getSizeOfGroup(),classRoomObj.getClassId()));
                     }
-                    ClassroomList.add(classRoomObj);
+                    listClassroom.add(classRoomObj);
                     return;
 
                 }
             }
         }
 
-        for(Classroom classRoomObj : ClassroomList){
+        for(Classroom classRoomObj : listClassroom){
             // Iterates through the list of ClassRooms
-            if (classRoomObj.inRange(studentObj.getAge())){
+            if (classRoomObj.inRange(studentObj.getInstructorAge())){
                 // For each Teacher in ClassRoom
-                for(Instructor teacherObj:classRoomObj.getTeacherList()){
+                for(Instructor teacherObj:classRoomObj.getListTeacher()){
                     if(teacherObj.isEmpty()){
                         // if teacher has space, assign
-                        studentObj.setClassId(classRoomObj.getId());
+                        studentObj.setClassroomId(classRoomObj.getClassId());
                         teacherObj.addStudent(studentObj);
                         return;
                     }
@@ -77,18 +77,18 @@ public class Daycare {
         }
 
         // For case when no classRoom exists
-        for (RatioRule ratioObj:ratioRules){
-            if (ratioObj.inRange(studentObj.getAge())){
-                Classroom classRoomObj = ClassroomLazySingletonFactory.getInstance().getObject(cid++,ratioObj.getLow(),ratioObj.getHigh(),ratioObj.getClassroomSize(), ratioObj.getNumber());
-                Instructor teacherObj = getNextTeacherObj(ratioObj.getGroupSize(),classRoomObj.getId());
-                studentObj.setClassId(classRoomObj.getId());
+        for (RatioRule ratioObj:rulesRatio){
+            if (ratioObj.inRange(studentObj.getInstructorAge())){
+                Classroom classRoomObj = ClassroomLazySingletonFactory.getInstance().getObject(classId++,ratioObj.getLow(),ratioObj.getHigh(),ratioObj.getSizeOfClassroom(), ratioObj.getNumber());
+                Instructor teacherObj = getNextTeacherObj(ratioObj.getSizeOfGroup(),classRoomObj.getClassId());
+                studentObj.setClassroomId(classRoomObj.getClassId());
                 teacherObj.addStudent(studentObj);
                 classRoomObj.addTeacher(teacherObj);
-                for(int i = 0; i < ratioObj.getClassroomSize()-1; i++){
-                    classRoomObj.addTeacher(getNextTeacherObj(ratioObj.getGroupSize(),classRoomObj.getId()));
+                for(int i = 0; i < ratioObj.getSizeOfClassroom()-1; i++){
+                    classRoomObj.addTeacher(getNextTeacherObj(ratioObj.getSizeOfGroup(),classRoomObj.getClassId()));
 
                 }
-                ClassroomList.add(classRoomObj);
+                listClassroom.add(classRoomObj);
 
             }
         }
@@ -96,20 +96,20 @@ public class Daycare {
     }
     
     public Instructor getNextTeacherObj(int size, int cid){
-        return new Instructor(TeacherCSVList.get(tid), tid++, size, cid);
+        return new Instructor(CSVListTeacher.get(teacherId), teacherId++, size, cid);
     }
 
     public void addAllStudentObjectsToCSV(){
         List<String> CSVListObj = new ArrayList<>();        
-        for (Student studentObj : StudentList) {
+        for (Student studentObj : listStudent) {
             CSVListObj.add(studentObj.toCSV());
         }        
         ConversionUtil.writingCSVFile(CSVListObj, "Student.txt");
     }
     
     public AbstractIndividual getStudentObjById(int id) {
-        for(AbstractIndividual person : StudentList) {
-            if(person.getId() == id)
+        for(AbstractIndividual person : listStudent) {
+            if(person.getInstructorId() == id)
                 return person;
         }
         return null;
@@ -119,56 +119,57 @@ public class Daycare {
    
     public void deleteStudentObjById(int studentId) {
         
-        List<Student> studentsListObj = StudentList
+        List<Student> studentsListObj = listStudent
             .stream()
-            .filter(i -> i.getId()!=studentId)            
+            .filter(i -> i.getInstructorId()!=studentId)            
             .collect(toList());
         
-        this.StudentList = studentsListObj;        
+        this.listStudent = studentsListObj;        
     }
     
     
 
-    public List<Student> getStudentList(){
-        return StudentList;
+    public List<Student> getListStudent(){
+        return listStudent;
     }
 
-    public List<Classroom> getClassroomList() {
-        return ClassroomList;
+    public List<Classroom> getListClassroom() {
+        return listClassroom;
     }
 
     public void showAll(){
-        for (Classroom c: ClassroomList){
+        for (Classroom c: listClassroom){
             c.showTeachers();
         }
     }
 
     
     public void setTeacherCSVList(List<String> teacherCSVList) {
-        TeacherCSVList = teacherCSVList;
+        CSVListTeacher = teacherCSVList;
     }
 
     
     public List<Student> getStudentListwithIsNeedRenewTrue(){
-       StudentListIsRenewTrue.clear();
-       for(Student s: StudentList){
-           if(s.isNeedRenew() == true)
-               StudentListIsRenewTrue.add(s);
+       IsRenewTrueStudentList.clear();
+       for(Student s: listStudent){
+           if(s.isIsRenewRequired() == true)
+               IsRenewTrueStudentList.add(s);
        }
-        return StudentListIsRenewTrue;
+        return IsRenewTrueStudentList;
     }
 
     public List<Student> getStudentListwithIsNeedRenewFalse(){
-       StudentListIsRenewFalse.clear();
-       for(Student s: StudentList){
-           if(s.isNeedRenew() == false)
-               StudentListIsRenewFalse.add(s);
+       IsRenewFalseStudentList.clear();
+       for(Student s: listStudent){
+           if(s.isIsRenewRequired() == false)
+               IsRenewFalseStudentList.add(s);
        }
-        return StudentListIsRenewFalse;
-    }
+        return IsRenewFalseStudentList;
+    } 
+
+//    public void setTeacherCSVList(List<String> TeacherCSVList) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
     
-    
-   
-   
 }

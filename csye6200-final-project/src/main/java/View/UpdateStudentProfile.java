@@ -35,25 +35,25 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
     }
 
     private void populateStudentInfo() {
-        firstNameValue.setText(student.getFirstName());
-        lastNameValue.setText(student.getLastName());
-        ageValue.setText(String.valueOf(student.getAge()));
-        idValue.setText(String.valueOf(student.getId()));
+        firstNameValue.setText(student.getInstructorFirstName());
+        lastNameValue.setText(student.getInstructorLastName());
+        ageValue.setText(String.valueOf(student.getInstructorAge()));
+        idValue.setText(String.valueOf(student.getInstructorId()));
         Student s = (Student) student;
-        enrolledOnValue.setText(s.getLastRegDate().toString());
-        addressValue.setText(s.getAddress());
-        phoneNumberValue.setText(s.getParentPhoneNumber());
-        renewalDateValue.setText(s.getExpectReNewDate().toString());  
+        enrolledOnValue.setText(s.getLastRegisteredData().toString());
+        addressValue.setText(s.getStudentAddress());
+        phoneNumberValue.setText(s.getParentContactNumber());
+        renewalDateValue.setText(s.getExpectedRenewDate().toString());  
         //jComboBox2.setSelectedIndex(3);
-        if(student.getAge() <= 12){
+        if(student.getInstructorAge() <= 12){
             jComboBox2.setSelectedIndex(0);
-        }else if((student.getAge() >=13) && (student.getAge()<=24)){
+        }else if((student.getInstructorAge() >=13) && (student.getInstructorAge()<=24)){
             jComboBox2.setSelectedIndex(1);
-        }else if((student.getAge() >=25) && (student.getAge()<=35)){
+        }else if((student.getInstructorAge() >=25) && (student.getInstructorAge()<=35)){
             jComboBox2.setSelectedIndex(2);
-        }else if((student.getAge() >=36) && (student.getAge()<=47)){
+        }else if((student.getInstructorAge() >=36) && (student.getInstructorAge()<=47)){
             jComboBox2.setSelectedIndex(3);  
-        }else if((student.getAge() >=48 )&& (student.getAge()<=59)){
+        }else if((student.getInstructorAge() >=48 )&& (student.getInstructorAge()<=59)){
             jComboBox2.setSelectedIndex(4);
         }else{
             jComboBox2.setSelectedIndex(5);
@@ -375,12 +375,12 @@ public class UpdateStudentProfile extends javax.swing.JPanel {
             if (s != null) {
                 Student student = (Student) s;
                 //student.setId(studentId); ID cannot chnage in the new model
-                student.setFirstName(studentFirstName);
-                student.setLastName(studentLastName);
+                student.setStudentFirstName(studentFirstName);
+                student.setStudentLastName(studentLastName);
                 //student.setLastRegDate(LocalDate.parse(regDate));
-                student.setAge(Integer.parseInt(age));
-                student.setAddress(address);
-                student.setParentPhoneNumber(phoneNumber);
+                student.setInstructorAge(Integer.parseInt(age));
+                student.setStudentAddress(address);
+                student.setParentContactNumber(phoneNumber);
                 //student.setGPA(Double.parseDouble(gpa));
 
                 //tfList.forEach(tf -> setEditableValue(tf, false));

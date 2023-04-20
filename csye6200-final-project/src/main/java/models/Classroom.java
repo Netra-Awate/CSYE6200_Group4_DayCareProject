@@ -5,70 +5,70 @@ import java.util.List;
 
 public class Classroom {
 
-    private int size;
-    private int id;
-    private List<Instructor> TeacherList = new ArrayList<>();
-    private int number;
+    private int classSize;
+    private int classId;
+    private List<Instructor> listTeacher = new ArrayList<>();
+    private int classroomNumber;
     private int count;
-    private int[] AgeRange = new int[2];
+    private int[] rangeOfAge = new int[2];
 
     public Classroom(int id, int low,int high,int size, int number){
-        this.id = id;
-        this.AgeRange[0] = low;
-        this.AgeRange[1] = high;
-        this.size = size;
-        this.number=number;
+        this.classId = id;
+        this.rangeOfAge[0] = low;
+        this.rangeOfAge[1] = high;
+        this.classSize = size;
+        this.classroomNumber=number;
     }
 
-    public int getNumber() {
-        return this.number;
+    public int getClassroomNumber() {
+        return this.classroomNumber;
     }
     
     public int getCount(){
         return this.count;
     }
 
-    public int[] getAgeRange(){
-        return this.AgeRange;
+    public int[] getRangeOfAge(){
+        return this.rangeOfAge;
     }
 
     public int getSize(){
-        return this.size;
+        return this.classSize;
     }
-    public int getId(){
-        return this.id;
+    public int getClassId(){
+        return this.classId;
     }
 
     public void addTeacher(Instructor t){
-        TeacherList.add(t);
+        listTeacher.add(t);
         count++;
     }
     
     public boolean inRange(int age){
-        return this.AgeRange[0]<=age && age<this.AgeRange[1];
+        return this.rangeOfAge[0]<=age && age<this.rangeOfAge[1];
     }
 
     public boolean isEmpty(){
-        return this.count < this.size;
+        return this.count < this.classSize;
     }
 
-    public List<Instructor> getTeacherList(){
-        return  this.TeacherList;
+    public List<Instructor> getListTeacher(){
+        return  this.listTeacher;
     }
     
      public void showTeachers(){
-        if(!TeacherList.isEmpty()){
-            for (Instructor teacherObj: TeacherList){
+        if(!listTeacher.isEmpty()){
+            for (Instructor teacherObj: listTeacher){
                 teacherObj.showStudents();
-                System.out.println(teacherObj.getId());
+                System.out.println(teacherObj.getInstructorId());
             }
         }
 
     }
 
     public void setAgeRange(int low, int high){
-        AgeRange[0] = low;
-        AgeRange[1] = high;
+        rangeOfAge[0] = low;
+        rangeOfAge[1] = high;
     }
 
 }
