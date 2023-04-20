@@ -81,7 +81,6 @@ public class Login extends javax.swing.JFrame {
         userdetails.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         userdetails.setForeground(new java.awt.Color(102, 193, 249));
         userdetails.setCaretColor(new java.awt.Color(255, 255, 255));
-        userdetails.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         userdetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userdetailsActionPerformed(evt);
@@ -92,7 +91,6 @@ public class Login extends javax.swing.JFrame {
         passwordDetails.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         passwordDetails.setForeground(new java.awt.Color(102, 193, 249));
         passwordDetails.setCaretColor(new java.awt.Color(255, 255, 255));
-        passwordDetails.setSelectedTextColor(new java.awt.Color(255, 255, 255));
         passwordDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordDetailsActionPerformed(evt);
