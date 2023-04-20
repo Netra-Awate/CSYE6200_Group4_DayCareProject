@@ -46,15 +46,14 @@ public class NewStudent extends javax.swing.JPanel {
         addStudentButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 0, 102));
         setMinimumSize(new java.awt.Dimension(1100, 700));
         setPreferredSize(new java.awt.Dimension(1100, 700));
 
-        headerPanel.setBackground(new java.awt.Color(255, 255, 255));
+        headerPanel.setBackground(new java.awt.Color(255, 153, 153));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Krub", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Admiting a NewStudent to DAYCARE");
         jLabel1.setToolTipText("");
@@ -64,19 +63,20 @@ public class NewStudent extends javax.swing.JPanel {
         contentPanel.setToolTipText("");
         contentPanel.setName(""); // NOI18N
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 102, 255));
         jLabel2.setText("First Name");
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 102, 255));
         jLabel6.setText("Age (months)");
 
         idValue.setEditable(false);
         idValue.setBackground(new java.awt.Color(255, 255, 255));
         idValue.setForeground(new java.awt.Color(0, 153, 255));
 
-        ageValue.setForeground(new java.awt.Color(0, 153, 255));
-
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 102, 255));
         jLabel9.setText("Last Name");
 
         studentLastNameValue.setForeground(new java.awt.Color(0, 153, 255));
@@ -86,7 +86,8 @@ public class NewStudent extends javax.swing.JPanel {
             }
         });
 
-        idLabel.setBackground(new java.awt.Color(255, 255, 255));
+        idLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        idLabel.setForeground(new java.awt.Color(51, 102, 255));
         idLabel.setText("ID");
 
         studentFirstNameValue.setForeground(new java.awt.Color(0, 153, 255));
@@ -96,14 +97,16 @@ public class NewStudent extends javax.swing.JPanel {
             }
         });
 
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 102, 255));
         jLabel11.setText("Registration Date");
 
         enrolledOn.setEditable(false);
         enrolledOn.setBackground(new java.awt.Color(255, 255, 255));
         enrolledOn.setForeground(new java.awt.Color(0, 153, 255));
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 102, 255));
         jLabel3.setText("Father Name");
 
         fatherNameValue.setForeground(new java.awt.Color(0, 153, 255));
@@ -113,13 +116,16 @@ public class NewStudent extends javax.swing.JPanel {
             }
         });
 
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 102, 255));
         jLabel5.setText("Mother Name");
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 102, 255));
         jLabel7.setText("Address");
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 102, 255));
         jLabel8.setText("Phone Number");
 
         motherNameValue.setForeground(new java.awt.Color(0, 153, 255));
@@ -141,7 +147,8 @@ public class NewStudent extends javax.swing.JPanel {
         ageGroupAssignedValue.setForeground(new java.awt.Color(0, 153, 255));
         ageGroupAssignedValue.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6-12months", "13-24months", "25-35months", "36-47months", "48-59months", "60months and Above" }));
 
-        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 102, 255));
         jLabel10.setText("Age Group Assigned");
 
         javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
@@ -294,9 +301,9 @@ public class NewStudent extends javax.swing.JPanel {
                 .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addStudentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                    .addComponent(addStudentButton)
+                    .addComponent(backButton))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
