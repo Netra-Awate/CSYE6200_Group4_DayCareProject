@@ -79,11 +79,11 @@ public class StudentMainController {
     private void setIcons() {
         Icon imageHelper = new Icon();
 
-        iconButtonMapping.put(studentRegistrationButton, "/icons/renewal.png");
-        iconButtonMapping.put(addStudentButton, "/icons/add-user.png");
-        iconButtonMapping.put(backButton, "/icons/previous.png");
-        iconButtonMapping.put(deleteButton1, "/icons/delete.png");
-        iconButtonMapping.put(viewStudentButton, "/icons/update.png");
+//        iconButtonMapping.put(studentRegistrationButton, "/icons/renewal.png");
+//        iconButtonMapping.put(addStudentButton, "/icons/add-user.png");
+//        iconButtonMapping.put(backButton, "/icons/previous.png");
+//        iconButtonMapping.put(deleteButton1, "/icons/delete.png");
+//        iconButtonMapping.put(viewStudentButton, "/icons/update.png");
 
         for (Map.Entry<JButton, String> button : iconButtonMapping.entrySet()) {
             imageHelper.setIcon(button.getValue(), button.getKey());
