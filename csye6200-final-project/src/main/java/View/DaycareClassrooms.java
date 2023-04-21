@@ -66,6 +66,7 @@ public class DaycareClassrooms extends javax.swing.JPanel {
         jScrollPane1.setBackground(new java.awt.Color(0, 102, 255));
 
         jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
+        jTable1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -84,6 +85,7 @@ public class DaycareClassrooms extends javax.swing.JPanel {
         jScrollPane2.setBackground(new java.awt.Color(0, 102, 255));
 
         jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
+        jTable2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -100,6 +102,7 @@ public class DaycareClassrooms extends javax.swing.JPanel {
         jScrollPane2.setViewportView(jTable2);
 
         jTable3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255), 3));
+        jTable3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -115,6 +118,7 @@ public class DaycareClassrooms extends javax.swing.JPanel {
         jTable3.setSelectionForeground(new java.awt.Color(153, 204, 0));
         jScrollPane3.setViewportView(jTable3);
 
+        jTable4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -130,6 +134,7 @@ public class DaycareClassrooms extends javax.swing.JPanel {
         jTable4.setSelectionForeground(new java.awt.Color(153, 204, 0));
         jScrollPane4.setViewportView(jTable4);
 
+        jTable5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -145,6 +150,7 @@ public class DaycareClassrooms extends javax.swing.JPanel {
         jTable5.setSelectionForeground(new java.awt.Color(153, 204, 0));
         jScrollPane5.setViewportView(jTable5);
 
+        jTable6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jTable6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
