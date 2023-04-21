@@ -38,7 +38,7 @@ public class StudentDetailsController {
         panel = new UpdateStudentProfile(container, student, daycare);
         
         this.backButton = panel.backButton;
-        this.pictureButton = panel.photoButton;
+//        this.pictureButton = panel.photoButton;
         
         backButton.addActionListener(l -> {
             goBackToPreviousScreen();
@@ -57,7 +57,7 @@ public class StudentDetailsController {
     private void setIcons() {
         Icon image = new Icon();
 
-        buttonIconMap.put(pictureButton, "/icons/children.png");
+//        buttonIconMap.put(pictureButton, "/icons/children.png");
         
 
         for (Map.Entry<JButton, String> button : buttonIconMap.entrySet()) {

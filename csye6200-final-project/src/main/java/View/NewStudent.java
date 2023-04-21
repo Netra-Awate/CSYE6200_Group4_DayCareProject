@@ -43,112 +43,132 @@ public class NewStudent extends javax.swing.JPanel {
         phoneNumberValue = new javax.swing.JTextField();
         ageGroupAssignedValue = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         addStudentButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 0, 102));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1100, 700));
         setPreferredSize(new java.awt.Dimension(1100, 700));
 
-        headerPanel.setBackground(new java.awt.Color(255, 153, 153));
+        headerPanel.setBackground(new java.awt.Color(255, 255, 255));
+        headerPanel.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel1.setForeground(new java.awt.Color(255, 51, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Admiting a NewStudent to DAYCARE");
+        jLabel1.setText("Admission to DAYCARE");
         jLabel1.setToolTipText("");
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
-        contentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 255)));
         contentPanel.setToolTipText("");
         contentPanel.setName(""); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 51, 102));
         jLabel2.setText("First Name");
 
-        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 51, 102));
         jLabel6.setText("Age (months)");
 
         idValue.setEditable(false);
         idValue.setBackground(new java.awt.Color(255, 255, 255));
-        idValue.setForeground(new java.awt.Color(0, 153, 255));
+        idValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
 
-        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(51, 102, 255));
+        ageValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 51, 102));
         jLabel9.setText("Last Name");
 
-        studentLastNameValue.setForeground(new java.awt.Color(0, 153, 255));
+        studentLastNameValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         studentLastNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentLastNameValueActionPerformed(evt);
             }
         });
 
-        idLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        idLabel.setForeground(new java.awt.Color(51, 102, 255));
+        idLabel.setBackground(new java.awt.Color(255, 255, 255));
+        idLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        idLabel.setForeground(new java.awt.Color(255, 51, 102));
         idLabel.setText("ID");
 
-        studentFirstNameValue.setForeground(new java.awt.Color(0, 153, 255));
+        studentFirstNameValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         studentFirstNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentFirstNameValueActionPerformed(evt);
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 51, 102));
         jLabel11.setText("Registration Date");
 
         enrolledOn.setEditable(false);
         enrolledOn.setBackground(new java.awt.Color(255, 255, 255));
-        enrolledOn.setForeground(new java.awt.Color(0, 153, 255));
+        enrolledOn.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 51, 102));
         jLabel3.setText("Father Name");
 
-        fatherNameValue.setForeground(new java.awt.Color(0, 153, 255));
+        fatherNameValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         fatherNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fatherNameValueActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 51, 102));
         jLabel5.setText("Mother Name");
 
-        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 51, 102));
         jLabel7.setText("Address");
 
-        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 51, 102));
         jLabel8.setText("Phone Number");
 
-        motherNameValue.setForeground(new java.awt.Color(0, 153, 255));
+        motherNameValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         motherNameValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 motherNameValueActionPerformed(evt);
             }
         });
 
-        addressValue.setForeground(new java.awt.Color(0, 153, 255));
+        addressValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
 
-        phoneNumberValue.setForeground(new java.awt.Color(0, 153, 255));
+        phoneNumberValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         phoneNumberValue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 phoneNumberValueActionPerformed(evt);
             }
         });
 
-        ageGroupAssignedValue.setForeground(new java.awt.Color(0, 153, 255));
+        ageGroupAssignedValue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         ageGroupAssignedValue.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6-12months", "13-24months", "25-35months", "36-47months", "48-59months", "60months and Above" }));
+        ageGroupAssignedValue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ageGroupAssignedValueActionPerformed(evt);
+            }
+        });
 
-        jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 51, 102));
         jLabel10.setText("Age Group Assigned");
 
         javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
@@ -160,7 +180,7 @@ public class NewStudent extends javax.swing.JPanel {
                 .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(idLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -170,8 +190,8 @@ public class NewStudent extends javax.swing.JPanel {
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(81, 81, 81)
+                    .addComponent(jLabel10))
+                .addGap(53, 53, 53)
                 .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contentPanelLayout.createSequentialGroup()
                         .addComponent(ageGroupAssignedValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,7 +208,7 @@ public class NewStudent extends javax.swing.JPanel {
                                 .addComponent(addressValue)
                                 .addComponent(phoneNumberValue))
                             .addComponent(enrolledOn, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(114, Short.MAX_VALUE))))
+                        .addContainerGap(61, Short.MAX_VALUE))))
         );
 
         contentPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {ageValue, enrolledOn, fatherNameValue, idValue, studentFirstNameValue, studentLastNameValue});
@@ -232,39 +252,48 @@ public class NewStudent extends javax.swing.JPanel {
                 .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(phoneNumberValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(ageGroupAssignedValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(ageGroupAssignedValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41))
         );
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/carer.png"))); // NOI18N
 
         javax.swing.GroupLayout headerPanelLayout = new javax.swing.GroupLayout(headerPanel);
         headerPanel.setLayout(headerPanelLayout);
         headerPanelLayout.setHorizontalGroup(
             headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(headerPanelLayout.createSequentialGroup()
-                .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(headerPanelLayout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(headerPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addGap(74, 74, 74)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
         headerPanelLayout.setVerticalGroup(
             headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(headerPanelLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(56, 56, 56)
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(40, 40, 40))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(26, 26, 26)))
                 .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         contentPanel.getAccessibleContext().setAccessibleName("Please Add Student Details");
 
-        addStudentButton.setBackground(new java.awt.Color(0, 102, 255));
+        addStudentButton.setBackground(new java.awt.Color(255, 51, 102));
         addStudentButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         addStudentButton.setForeground(new java.awt.Color(255, 255, 255));
         addStudentButton.setText("Add");
@@ -274,7 +303,7 @@ public class NewStudent extends javax.swing.JPanel {
             }
         });
 
-        backButton.setBackground(new java.awt.Color(0, 102, 255));
+        backButton.setBackground(new java.awt.Color(255, 51, 102));
         backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("Back");
 
@@ -283,27 +312,27 @@ public class NewStudent extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(251, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(196, 196, 196))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(91, 91, 91)
+                        .addGap(90, 90, 90)
                         .addComponent(addStudentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(313, 313, 313))))
+                        .addGap(314, 314, 314))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addStudentButton)
-                    .addComponent(backButton))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addStudentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -336,6 +365,10 @@ public class NewStudent extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_phoneNumberValueActionPerformed
 
+    private void ageGroupAssignedValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageGroupAssignedValueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ageGroupAssignedValueActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton addStudentButton;
@@ -354,6 +387,7 @@ public class NewStudent extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
