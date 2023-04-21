@@ -47,12 +47,13 @@ public class RenewalTracking extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(1100, 700));
 
         HEADING.setBackground(new java.awt.Color(255, 255, 255));
-        HEADING.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
-        HEADING.setForeground(new java.awt.Color(0, 102, 255));
+        HEADING.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        HEADING.setForeground(new java.awt.Color(255, 51, 102));
         HEADING.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         HEADING.setText(" List of Students needing Renewal ");
 
-        backButton.setBackground(new java.awt.Color(0, 102, 255));
+        backButton.setBackground(new java.awt.Color(255, 51, 102));
+        backButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +64,6 @@ public class RenewalTracking extends javax.swing.JPanel {
 
         jScrollPane1.setBackground(new java.awt.Color(0, 102, 255));
 
-        RenewalTable.setBackground(new java.awt.Color(0, 102, 255));
         RenewalTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -96,7 +96,6 @@ public class RenewalTracking extends javax.swing.JPanel {
 
         jScrollPane2.setBackground(new java.awt.Color(0, 102, 255));
 
-        NoRenewalTable.setBackground(new java.awt.Color(0, 102, 255));
         NoRenewalTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -128,14 +127,17 @@ public class RenewalTracking extends javax.swing.JPanel {
         jScrollPane2.setViewportView(NoRenewalTable);
 
         RenewalRequiredHeading.setBackground(new java.awt.Color(204, 255, 255));
-        RenewalRequiredHeading.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
+        RenewalRequiredHeading.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 17)); // NOI18N
+        RenewalRequiredHeading.setForeground(new java.awt.Color(0, 51, 255));
         RenewalRequiredHeading.setText("RENEWAL ");
 
         NoRenewalRequiredHeading.setBackground(new java.awt.Color(255, 255, 255));
-        NoRenewalRequiredHeading.setFont(new java.awt.Font("Krub", 1, 18)); // NOI18N
+        NoRenewalRequiredHeading.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 17)); // NOI18N
+        NoRenewalRequiredHeading.setForeground(new java.awt.Color(0, 51, 255));
         NoRenewalRequiredHeading.setText("NON RENEWAL ");
 
-        RenewButton.setBackground(new java.awt.Color(0, 102, 255));
+        RenewButton.setBackground(new java.awt.Color(255, 51, 102));
+        RenewButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         RenewButton.setForeground(new java.awt.Color(255, 255, 255));
         RenewButton.setText("Renew");
         RenewButton.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +174,7 @@ public class RenewalTracking extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(HEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(NoRenewalRequiredHeading)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
